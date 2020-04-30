@@ -6,7 +6,7 @@ module.exports = {
     const comerciante_id = req.headers.authorization;
     
     
-    const [id] = await connection('produto').insert({
+    const [ id ] = await connection('produto').insert({
         nome,
         foto,
         preco_custo,

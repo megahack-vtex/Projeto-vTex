@@ -9,7 +9,7 @@ module.exports = {
 
     const { nome, cpf, foto, endereco, bairro, cidade, estado,telefone, celular,status } = req.body;
 
-    const id =  crypto.randomBytes(4).toString('DEC');
+    const id =  crypto.randomBytes(2).toString('DEC');  // criar um id com 2 bytes inteiro
 
     await connection('cliente').insert({
        id,
