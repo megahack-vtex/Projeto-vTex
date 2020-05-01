@@ -10,7 +10,7 @@ module.exports = {
 
 
 
-    const [ id ] = await connection('entrega').insert({
+    const [ id ] = await connection('itens_pedidos').insert({
         pedido_id,
         produto_id,
         qtd,

@@ -11,7 +11,7 @@ exports.up = function(knex) {
     table.integer('telefone', 10).notNullable();
     table.integer('celular', 10).notNullable();
     table.string('email', 50).notNullable();
-    table.string('status', 10).notNullable();
+    table.integer('nota', 3).notNullable();
   });
 };
 

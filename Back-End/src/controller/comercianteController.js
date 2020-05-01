@@ -3,11 +3,11 @@ const connection = require('../database/connection');
 
 module.exports = {async create (req,resp){
 
-  const { nome, cnpj, endereco, bairro, cidade, estado,telefone, celular,status } = req.body;
+  const { nome, cnpj, endereco, bairro, cidade, estado,telefone, celular,nota} = req.body;
 
   const id =  crypto.randomBytes(4).toString('DEC');
 
-  await connection('cliente').insert({
+  await connection('comerciante').insert({
      id,
      nome,
      cnpj,
@@ -17,7 +17,7 @@ module.exports = {async create (req,resp){
      estado,
      telefone,
      celular,
-     status,
+     nota,
   })
 return resp.json({ id });
 },

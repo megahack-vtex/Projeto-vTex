@@ -8,7 +8,7 @@ module.exports = {
     const comerciante_id = req.header.comercio;
 
 
-    const [ id ] = await connection('produto').insert({
+    const [ id ] = await connection('estoque').insert({
         produto_id,
         nome,
         qtd_inicial,
