@@ -17,5 +17,11 @@ module.exports = {
 
     return resp.json({ id });
   },
-  
+  async buscaValor(req,resp){
+    const value = await connection('produto').select('*').where('preco_venda','<=',50.00);
+
+
+    return resp.json(value);
+  },
+
 }

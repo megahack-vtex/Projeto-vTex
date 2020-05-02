@@ -18,9 +18,10 @@ routes.post('/cliente',clienteController.create); //criação de cliente
 
 routes.get('/comerciante',comercianteController.index);  // listagem de comerciante 
 routes.post('/comerciante',comercianteController.create);//criação de comerciante
-
+routes.get('/comercio',comercianteController.busca);
 
 routes.post('/produto',produtoController.create); //criação de produto
+routes.get('/busca',produtoController.buscaValor);
 
 
 routes.post('/estoque', estoqueController.create); //criação de estoque

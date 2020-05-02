@@ -26,4 +26,17 @@ const comerciante = await connection('comerciante').select('*');
   
     return resp.json(comerciante);
   },
+
+  // para encontrar melhores lugar com notas iguais ou maiores que 5
+   async busca(req,resp){
+     const comercio = await connection('comerciante').select('*').where('nota','>=',5);
+
+     return resp.json(comercio);
+   },
+
+ 
+
+
+
+
 };
